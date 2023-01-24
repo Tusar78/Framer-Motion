@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .main {
+    @apply w-full h-screen bg-[url('./assets/images/beams.jpg')];
+  }
+
+  .custom-container {
+    @apply w-full h-screen bg-[url('./assets/images/grid.svg')] grid place-items-center;
+  }
+}
