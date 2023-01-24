@@ -17,11 +17,19 @@ const App = () => {
             className="w-28 h-28 rounded-3xl bg-purple-400"
           ></motion.div>
         </div> */}
-        <div className=" w-6/12 h-96 border border-slate-300 rounded-md grid place-items-center overflow-hidden">
+        {/* <div className=" w-6/12 h-96 border border-slate-300 rounded-md grid place-items-center overflow-hidden">
           <motion.div
             whileDrag={{scale: 1.2}}
             drag
             dragConstraints={{left: 50}}
+            onClick={() => setRotate(!rotate)}
+            className="w-28 h-28 rounded-3xl bg-purple-400"
+          ></motion.div>
+        </div> */}
+        <div className=" w-6/12 h-96 border border-slate-300 rounded-md grid place-items-center overflow-hidden">
+          <motion.div
+            animate={{rotate: [0, 45, -360, 45, 0], x: [0, 200, -40, 400, -400, 0]}}
+            transition={{repeat: Infinity, duration: 5, type:"spring", bounce: 4}}
             onClick={() => setRotate(!rotate)}
             className="w-28 h-28 rounded-3xl bg-purple-400"
           ></motion.div>
