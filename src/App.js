@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
 
 const App = () => {
   const [rotate, setRotate] = useState(false);
@@ -9,6 +9,7 @@ const App = () => {
         <div className=" w-96 h-72 border border-slate-300 rounded-md grid place-items-center">
           <motion.div
             animate={{ rotate: rotate ? 90 : 0, x: rotate ? 70 : 0 }}
+            transition={{delay: 2}}
             onClick={() => setRotate(!rotate)}
             className="w-28 h-28 rounded-3xl bg-purple-400"
           ></motion.div>
